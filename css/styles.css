@@ -69,9 +69,10 @@ img {
 
 .text-link {
   margin-right: 50px;
+  letter-spacing: 0.02em;
 }
 .site-nav .text-link {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.07;
   color: #212121;
@@ -83,7 +84,7 @@ img {
 
 .auth-nav .text-link {
   color: var(--title-text-color);
-  font-weight: 500;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.07;
 }
@@ -123,22 +124,24 @@ a {
 }
 
 /* hero */
-.hero-container {
+/* .hero-container {
   padding: 200px 452px 280px 452px;
-}
-.heading {
+} */
+.heading-hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-color: #2f303a;
 }
 
 .hero-titele {
   color: var(--main-background);
-  font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  width: 696px;
   text-align: center;
+  margin: 0;
 }
 .button {
+  display: inline-block;
   color: var(--title-text-color);
   background-color: #ffffff;
   font-weight: 700;
@@ -146,10 +149,13 @@ a {
   line-height: 2;
   letter-spacing: 0.03em;
   cursor: pointer;
-  border: 0;
-  position: auto;
   width: 200px;
   height: 50px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-top: 30px;
+  border: 0;
 }
 
 .button:hover {
@@ -238,8 +244,8 @@ a {
 }
 .feature-list {
   display: flex;
-  margin-top: 94px;
-  margin-bottom: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
   width: 1170px;
 }
 
@@ -263,14 +269,33 @@ a {
 }
 .button-menu {
   display: flex;
-  padding-bottom: 34px;
+  margin-bottom: 50px;
+  margin-left: 300px;
 }
-.table {
-  display: flex;
-  flex-wrap: wrap;
+
+.section-button {
+  padding: 94px 0;
 }
-.miscellaneous {
-  padding: 94px 215px 94px 215px;
+.button-box:hover {
+  background: var(--accent-color);
+  border-radius: 4px;
+  color: var(--main-background);
+}
+.button-box {
+  /* display: inline-block; */
+  color: var(--title-text-color);
+  background-color: #f5f4fa;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 0.03em;
+
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-left: 30px;
+
+  border: 0;
 }
 .cards {
   padding: 20px 24px 20px 24px;
@@ -282,20 +307,23 @@ a {
   font-size: 18px;
   line-height: 2;
 }
-.table {
+.section-table {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
+  margin-bottom: -30px;
 }
 .table-img {
   flex-basis: calc((100% - 9 * 30px) / 3);
   margin-left: 30px;
+  margin-bottom: 30px;
 }
 /* Footer */
 .heading {
   padding-top: 60px;
   padding-bottom: 60px;
   padding-left: 215px;
+  background-color: #2f303a;
 }
 
 .text-footer {
