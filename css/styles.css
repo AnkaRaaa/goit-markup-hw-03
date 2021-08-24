@@ -50,6 +50,7 @@ img {
 .header-nav {
   padding-top: 24px;
   padding-bottom: 25px;
+  border: 1px solid #ececec;
 }
 .header-nav .container {
   display: flex;
@@ -65,32 +66,42 @@ img {
 /* sate nav */
 .site-nav {
   display: flex;
-}
-
-.text-link {
   margin-right: 50px;
   letter-spacing: 0.02em;
 }
-.site-nav .text-link {
-  font-weight: 700;
+
+.text-link {
+}
+
+.site-nav-link:last-child {
+  margin: 50px;
+}
+
+.site-nav-link {
+  font-weight: 500;
   font-size: 14px;
   line-height: 1.07;
   color: #212121;
 }
 .auth-nav {
   display: flex;
-  padding-left: 221px;
+  margin-left: auto;
 }
 
-.auth-nav .text-link {
+.auth-nav-link:last-child {
   color: var(--title-text-color);
-  font-weight: 700;
+  font-weight: 500;
   font-size: 14px;
   line-height: 1.07;
+  margin-right: 50px;
 }
 /* навигация */
-.text-link:hover,
-.text-link:focus {
+.auth-nav-link:hover,
+.auth-nav-link:focus {
+  color: var(--accent-color);
+}
+.site-nav-link:hover,
+.site-nav-link:focus {
   color: var(--accent-color);
 }
 li {
@@ -125,7 +136,7 @@ a {
 
 /* hero */
 /* .hero-container {
-  padding: 200px 452px 280px 452px;
+
 } */
 .heading-hero {
   padding-top: 200px;
@@ -142,8 +153,8 @@ a {
 }
 .button {
   display: inline-block;
-  color: var(--title-text-color);
-  background-color: #ffffff;
+  background: var(--accent-color);
+  color: var(--main-background);
   font-weight: 700;
   font-size: 16px;
   line-height: 2;
@@ -164,7 +175,15 @@ a {
   color: var(--main-background);
 }
 /* section */
-.section-title {
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.section-desc {
+  padding-top: 0px;
+  padding-bottom: 94px;
+}
+.section-title-text {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -172,8 +191,19 @@ a {
   display: none;
   width: 1170px;
 }
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  background-color: #ffffff;
+  width: 1170px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.section-list:nth-child(-n + 3) {
+  margin-left: 30px;
+}
 
-/* section commands */
 .section-fotowork {
   display: flex;
   flex-wrap: wrap;
@@ -182,45 +212,48 @@ a {
 .section-fotowork-box {
   flex-basis: calc((100% - 3 * 30px) / 3);
   margin-left: 30px;
+  max-width: 100%;
+  height: auto;
 }
 
-.container-commands {
+/* .container-commands {
   display: flex;
-  height: 648px;
   display: block;
-}
+} */
 .section-foto {
   margin-left: -30px;
 }
 .section-fotoimg {
-  flex-basis: calc((100% - 4 * 30px) / 3);
+  flex-basis: calс (100% / 4 - 30px);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
   margin-left: 30px;
+  margin-right: 215px;
 }
 .section-text {
   font-weight: normal;
   font-size: 16px;
   line-height: 1.18;
   color: var(--title-text-color);
-  padding-top: 10px;
+  margin-top: 10px;
   text-align: center;
 }
 .hard-workers {
-  background-color: #f5f4fa;
-  width: 270px;
-  height: 108px;
+  background-color: #ffffff;
+  padding: 30px 0;
 }
 .section-commands {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
-  padding-top: 94px;
+  margin-bottom: 50px;
 }
 .section-subject {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
-  padding-top: 30px;
   text-align: center;
 }
 
@@ -234,26 +267,25 @@ a {
 
 .section-foto {
   display: flex;
-  padding: 50px 215px 94px 215px;
 }
-.sectionimg {
-  background-color: var(--secondary-background);
+
+.section-sectionimg {
+  background-color: #f5f4fa;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .section-peopel {
   display: flex;
 }
 .feature-list {
   display: flex;
-  padding-top: 94px;
-  padding-bottom: 94px;
-  width: 1170px;
 }
 
 .feature-list-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  margin: 30px;
+  margin-bottom: 10px;
 }
 .feature-list-text {
   font-weight: normal;
@@ -261,7 +293,6 @@ a {
   line-height: 1.71;
   color: var(--title-text-color);
   width: 270px;
-  margin: 30px;
 }
 /* portfolio */
 .text {
@@ -270,7 +301,7 @@ a {
 .button-menu {
   display: flex;
   margin-bottom: 50px;
-  margin-left: 300px;
+  justify-content: center;
 }
 
 .section-button {
@@ -289,12 +320,10 @@ a {
   font-size: 16px;
   line-height: 2;
   letter-spacing: 0.03em;
-
   position: relative;
   left: 50%;
   transform: translate(-50%, 0);
   margin-left: 30px;
-
   border: 0;
 }
 .cards {
@@ -330,17 +359,18 @@ a {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
-  padding-bottom: 9px;
   color: var(--main-background);
 }
 .address-text {
-  padding-top: 20px;
+  margin-top: 20px;
+}
+.address-text-link {
+  margin-bottom: 9px;
 }
 .text-communication {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
-  padding-top: 9px;
   color: rgba(255, 255, 255, 0.6);
 }
